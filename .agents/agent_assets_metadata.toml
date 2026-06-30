@@ -42,3 +42,117 @@ id = "pA9Bbxn1QgIYd30jBPS_I"
 uri = "file://artifacts/uniforms-vitrine/src/assets/school.png"
 type = "image"
 title = "School uniform"
+
+[[generated]]
+id = "Hi-v67VbraIrAM4X9YDIV"
+uri = "file://artifacts/uniforms-vitrine/src/assets/corp-exec-suit.png"
+type = "image"
+title = "Corporate executive suit"
+
+[[generated]]
+id = "KyXFjPqIRNHm9OAucCVHk"
+uri = "file://artifacts/uniforms-vitrine/src/assets/corp-shirt.png"
+type = "image"
+title = "Business dress shirt"
+
+[[generated]]
+id = "V_h3tXP9vV_8dbRp2En2b"
+uri = "file://artifacts/uniforms-vitrine/src/assets/corp-polo.png"
+type = "image"
+title = "Corporate polo shirt"
+
+[[generated]]
+id = "SzBeZ-nUk9QjnG0hi_Aur"
+uri = "file://artifacts/uniforms-vitrine/src/assets/corp-abaya.png"
+type = "image"
+title = "Ladies corporate abaya"
+
+[[generated]]
+id = "ioxyRqye5Kbxhr4Uko3oM"
+uri = "file://artifacts/uniforms-vitrine/src/assets/corp-vest.png"
+type = "image"
+title = "Reception vest and blazer"
+
+[[generated]]
+id = "Nn2kVbQNfYS69fRDev99U"
+uri = "file://artifacts/uniforms-vitrine/src/assets/corp-trousers.png"
+type = "image"
+title = "Tailored dress trousers"
+
+[[generated]]
+id = "_QSoMt-X-2k3TDS8w9qGm"
+uri = "file://artifacts/uniforms-vitrine/src/assets/health-scrubs.png"
+type = "image"
+title = "Medical scrubs set"
+
+[[generated]]
+id = "V6TpkIp8RTplLeNQmGJsE"
+uri = "file://artifacts/uniforms-vitrine/src/assets/health-labcoat.png"
+type = "image"
+title = "Doctor lab coat"
+
+[[generated]]
+id = "iqikgrcCFrIOfy9DqEwu-"
+uri = "file://artifacts/uniforms-vitrine/src/assets/health-nurse.png"
+type = "image"
+title = "Nurse uniform"
+
+[[generated]]
+id = "Eu9H2akRdVB9-SzhuScrQ"
+uri = "file://artifacts/uniforms-vitrine/src/assets/health-gown.png"
+type = "image"
+title = "Patient gown"
+
+[[generated]]
+id = "i_ctfJvgZze8zbqYJIOvn"
+uri = "file://attached_assets/generated_images/hotel_front_desk_receptionist_432f.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "2ozKAxY9IlhaDwMAWrgXn"
+uri = "file://attached_assets/generated_images/surgical_cap_and_mask_f129.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "a8qMDUnSltqMfe-ZZ73tc"
+uri = "file://attached_assets/generated_images/dental_team_uniform_light_cc7d.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "pyy3zt338LA_IuH4PiHBL"
+uri = "file://attached_assets/generated_images/hotel_housekeeping_uniform_neat_9d57.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "nQXv79L39hPTzGVcNPsgE"
+uri = "file://attached_assets/generated_images/classic_white_chef_coat_b529.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "za7xzXAP-RUkpcW2zpY1L"
+uri = "file://attached_assets/generated_images/bellboy_concierge_uniform_formal_d42d.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "UsRUrLLG0XAVsh3goqQ_2"
+uri = "file://attached_assets/generated_images/spa_therapist_uniform_soft_eb0e.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Iw1pPtlnSMTXAF_fni6L8"
+uri = "file://attached_assets/generated_images/high_visibility_safety_vest_96ec.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "YRtHxnpasEvauh7oPB7mc"
+uri = "file://attached_assets/generated_images/industrial_navy_blue_coverall_0e63.png"
+type = "image"
+title = "generated_image"

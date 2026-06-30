@@ -93,6 +93,86 @@ export const content = {
       quickLinks: "Quick Links",
       rights: "All rights reserved. Muscat Meditex.",
     },
+    collections: {
+      corporate: {
+        id: "corporate",
+        title: "Corporate & Business",
+        subtitle: "Tailored suits, shirts, and executive wear for modern professionals.",
+        items: [
+          { id: "exec-suit", title: "Executive Suit Set", titleAr: "طقم البدلة التنفيذية", desc: "Three-piece tailored suit in premium wool blend. Available in navy, charcoal, and black.", descAr: "بدلة مكونة من ثلاث قطع من الصوف الممتاز. متوفرة بألوان كحلي وفحمي وأسود.", img: "corp-exec-suit.png" },
+          { id: "business-shirt", title: "Business Dress Shirt", titleAr: "قميص العمل الرسمي", desc: "Crisp cotton shirts with embroidery option. Perfect for daily corporate wear.", descAr: "قمصان قطنية أنيقة مع خيار التطريز. مثالية للارتداء اليومي.", img: "corp-shirt.png" },
+          { id: "polo-shirt", title: "Corporate Polo Shirt", titleAr: "قميص بولو مؤسسي", desc: "Branded polo shirts in breathable piqué fabric. Ideal for outdoor and field staff.", descAr: "قميص بولو مع شعار الشركة، قماش بيكيه قابل للتنفس.", img: "corp-polo.png" },
+          { id: "ladies-abaya", title: "Ladies Corporate Abaya", titleAr: "عباية مؤسسية نسائية", desc: "Elegant abayas tailored for professional Omani women. Refined silhouette.", descAr: "عبايات أنيقة مصممة للمرأة العمانية المهنية.", img: "corp-abaya.png" },
+          { id: "reception-vest", title: "Reception Vest & Blazer", titleAr: "سترة الاستقبال والبليزر", desc: "Smart vests and blazers for front-desk and reception staff.", descAr: "سترات وجاكيتات للطواقم الاستقبالية.", img: "corp-vest.png" },
+          { id: "trousers", title: "Tailored Dress Trousers", titleAr: "بناطيل رسمية مفصلة", desc: "Custom-fit trousers in wrinkle-resistant fabric for all-day comfort.", descAr: "بناطيل مخصصة من قماش مقاوم للتجعد.", img: "corp-trousers.png" }
+        ]
+      },
+      healthcare: {
+        id: "healthcare",
+        title: "Healthcare & Medical",
+        subtitle: "Premium scrubs, lab coats, and hygienic wear for medical staff.",
+        items: [
+          { id: "scrubs-set", title: "Medical Scrubs Set", titleAr: "طقم سكراب طبي", desc: "Lightweight, breathable scrubs in a range of clinical colors. Antibacterial finish.", descAr: "سكراب طبي خفيف وقابل للتنفس بألوان طبية متنوعة.", img: "health-scrubs.png" },
+          { id: "lab-coat", title: "Doctor Lab Coat", titleAr: "معطف طبيب المختبر", desc: "Premium white lab coats with deep pockets and embroidery options.", descAr: "معاطف بيضاء فاخرة مع جيوب عميقة وخيار التطريز.", img: "health-labcoat.png" },
+          { id: "nurse-uniform", title: "Nurse Uniform", titleAr: "زي الممرضة", desc: "Comfortable and hygienic nursing uniforms, available in multiple colors.", descAr: "زي تمريض مريح وصحي بألوان متعددة.", img: "health-nurse.png" },
+          { id: "patient-gown", title: "Patient Gown", titleAr: "رداء المريض", desc: "Soft, dignified patient gowns for hospitals and clinics.", descAr: "روب مريض ناعم وكريم للمستشفيات والعيادات.", img: "health-gown.png" },
+          { id: "surgical-cap", title: "Surgical Cap & Mask Set", titleAr: "طقم غطاء رأس وكمامة جراحية", desc: "Disposable and reusable surgical head covers with mask.", descAr: "أغطية رأس جراحية للاستخدام مرة واحدة أو قابلة لإعادة الاستخدام.", img: "health-cap.png" },
+          { id: "dental-uniform", title: "Dental Team Uniform", titleAr: "زي فريق طب الأسنان", desc: "Specialized uniforms for dental professionals — clean, modern, professional.", descAr: "زي متخصص لأطباء وطواقم الأسنان.", img: "health-dental.png" }
+        ]
+      },
+      hospitality: {
+        id: "hospitality",
+        title: "Hospitality",
+        subtitle: "Elegant uniforms for hotels, resorts, and culinary teams.",
+        items: [
+          { id: "hotel-frontdesk", title: "Hotel Front Desk Uniform", titleAr: "زي موظف الاستقبال الفندقي", desc: "Elegant, polished uniforms for hotel reception teams.", descAr: "زي أنيق ومتقن لفرق استقبال الفنادق.", img: "hosp-frontdesk.png" },
+          { id: "housekeeping", title: "Housekeeping Uniform", titleAr: "زي الغرف والتدبير المنزلي", desc: "Functional and neat uniforms for housekeeping staff.", descAr: "زي وظيفي وأنيق لموظفي التدبير المنزلي.", img: "hosp-housekeeping.png" },
+          { id: "chef-uniform", title: "Chef & Kitchen Uniform", titleAr: "زي الشيف والمطبخ", desc: "Classic white chef coats and kitchen uniforms built for durability.", descAr: "معطف الشيف الكلاسيكي وزي المطبخ المصنوع للمتانة.", img: "hosp-chef.png" },
+          { id: "bellboy", title: "Bellboy & Concierge Uniform", titleAr: "زي حامل الأمتعة والكونسيرج", desc: "Commanding, formal attire for bellboys and concierge services.", descAr: "زي رسمي مهيب لحاملي الأمتعة وموظفي الكونسيرج.", img: "hosp-bellboy.png" },
+          { id: "waiter-uniform", title: "Waiter & Banquet Staff Uniform", titleAr: "زي النادل وطاقم المناسبات", desc: "Classic black and white waiter uniforms for fine-dining and events.", descAr: "زي كلاسيكي أبيض وأسود للنوادل وفرق المناسبات.", img: "hosp-waiter.png" },
+          { id: "spa-uniform", title: "Spa & Wellness Uniform", titleAr: "زي السبا والعافية", desc: "Soft, elegant uniforms for spa therapists and wellness centers.", descAr: "زي ناعم وأنيق لمعالجي السبا ومراكز العافية.", img: "hosp-spa.png" }
+        ]
+      },
+      industrial: {
+        id: "industrial",
+        title: "Industrial & Safety",
+        subtitle: "High-visibility and flame-resistant gear for oil, gas, and construction.",
+        items: [
+          { id: "hi-vis-vest", title: "High-Visibility Safety Vest", titleAr: "سترة السلامة عالية الوضوح", desc: "EN ISO-compliant reflective vests for site workers.", descAr: "سترات عاكسة متوافقة مع معايير السلامة لعمال المواقع.", img: "ind-hivis.png" },
+          { id: "coverall", title: "Industrial Coverall", titleAr: "ملابس الغطاء الصناعي", desc: "Durable one-piece coveralls for oil, gas, and construction sectors.", descAr: "ملابس غطاء متينة من قطعة واحدة لقطاعات النفط والغاز والبناء.", img: "ind-coverall.png" },
+          { id: "fr-jacket", title: "Flame-Resistant Jacket", titleAr: "جاكيت مقاوم للهب", desc: "Certified FR jackets offering protection in high-heat environments.", descAr: "جاكيتات مقاومة للهب معتمدة للبيئات عالية الحرارة.", img: "ind-frjacket.png" },
+          { id: "safety-helmet", title: "Safety Helmet & PPE Kit", titleAr: "خوذة السلامة وطقم الحماية", desc: "Complete PPE kits including helmet, gloves, and safety glasses.", descAr: "طقم حماية شخصية كامل يشمل الخوذة والقفازات ونظارات الأمان.", img: "ind-helmet.png" },
+          { id: "welding-suit", title: "Welding Protective Suit", titleAr: "بدلة وقاية اللحام", desc: "Heavy-duty leather and FR fabric suits for welders.", descAr: "بدلات من الجلد والقماش المقاوم للهب لعمال اللحام.", img: "ind-welding.png" },
+          { id: "work-boots", title: "Safety Work Boots", titleAr: "حذاء العمل الآمن", desc: "Steel-toe, slip-resistant boots for demanding work environments.", descAr: "أحذية بمقدمة فولاذية ومقاومة للانزلاق.", img: "ind-boots.png" }
+        ]
+      },
+      security: {
+        id: "security",
+        title: "Security Forces",
+        subtitle: "Commanding and functional apparel for guards and security personnel.",
+        items: [
+          { id: "guard-uniform", title: "Security Guard Uniform", titleAr: "زي حارس الأمن", desc: "Professional, commanding uniforms for security personnel.", descAr: "زي احترافي ومهيب لأفراد الأمن.", img: "sec-guard.png" },
+          { id: "patrol-jacket", title: "Patrol Jacket", titleAr: "جاكيت الدورية", desc: "Tactical patrol jackets with multiple pockets for outdoor guards.", descAr: "جاكيتات دورية تكتيكية بجيوب متعددة للحراس الخارجيين.", img: "sec-patrol.png" },
+          { id: "access-control", title: "Access Control Staff Uniform", titleAr: "زي موظف التحكم بالدخول", desc: "Smart, formal uniforms for gatehouse and access control teams.", descAr: "زي رسمي أنيق لطواقم البوابات والتحكم بالدخول.", img: "sec-access.png" },
+          { id: "vip-protection", title: "VIP Protection Suit", titleAr: "بدلة حماية الشخصيات", desc: "Discreet, professional suits for executive protection details.", descAr: "بدلات احترافية وغير لافتة لفرق حماية الشخصيات.", img: "sec-vip.png" },
+          { id: "k9-handler", title: "K9 Handler Uniform", titleAr: "زي مدرب الكلاب الأمنية", desc: "Durable, functional uniforms for canine security teams.", descAr: "زي متين ووظيفي لفرق الكلاب الأمنية.", img: "sec-k9.png" },
+          { id: "event-security", title: "Event Security Uniform", titleAr: "زي أمن الفعاليات", desc: "High-visibility branded uniforms for crowd control and events.", descAr: "زي بألوان واضحة ومطبوع للتحكم بالحشود والفعاليات.", img: "sec-event.png" }
+        ]
+      },
+      school: {
+        id: "school",
+        title: "School Uniforms",
+        subtitle: "Durable, comfortable, and neat uniforms for educational institutions.",
+        items: [
+          { id: "boys-uniform", title: "Boys School Uniform", titleAr: "زي الطلاب", desc: "Classic shirt and trouser sets available in multiple school colors.", descAr: "طقم قميص وبنطال كلاسيكي بألوان المدرسة المختلفة.", img: "sch-boys.png" },
+          { id: "girls-uniform", title: "Girls School Uniform", titleAr: "زي الطالبات", desc: "Neat, modest girls' uniforms with hijab options.", descAr: "زي أنيق ومحتشم للطالبات مع خيارات الحجاب.", img: "sch-girls.png" },
+          { id: "pe-kit", title: "PE & Sports Kit", titleAr: "طقم التربية الرياضية", desc: "Lightweight sportswear sets for physical education and school sports.", descAr: "طقم ملابس رياضية خفيفة للتربية الرياضية والرياضة المدرسية.", img: "sch-pe.png" },
+          { id: "teacher-uniform", title: "Teacher & Staff Uniform", titleAr: "زي المعلمين والطاقم", desc: "Professional, modest uniforms for teaching and admin staff.", descAr: "زي احترافي ومحتشم للمعلمين والطواقم الإدارية.", img: "sch-teacher.png" },
+          { id: "winter-jacket", title: "School Winter Jacket", titleAr: "جاكيت المدرسة الشتوي", desc: "Warm, durable winter jackets embroidered with school logo.", descAr: "جاكيت شتوي دافئ ومتين مطرز بشعار المدرسة.", img: "sch-winter.png" },
+          { id: "preschool", title: "Preschool & Kindergarten Uniform", titleAr: "زي رياض الأطفال", desc: "Soft, comfortable, and safe uniforms for young children.", descAr: "زي ناعم ومريح وآمن للأطفال الصغار.", img: "sch-preschool.png" }
+        ]
+      }
+    }
   },
   ar: {
     nav: {
@@ -188,5 +268,85 @@ export const content = {
       quickLinks: "روابط سريعة",
       rights: "جميع الحقوق محفوظة. مسقط ميديتكس.",
     },
+    collections: {
+      corporate: {
+        id: "corporate",
+        title: "الشركات والأعمال",
+        subtitle: "بدلات وقمصان وملابس تنفيذية مصممة خصيصاً للمحترفين.",
+        items: [
+          { id: "exec-suit", title: "Executive Suit Set", titleAr: "طقم البدلة التنفيذية", desc: "Three-piece tailored suit in premium wool blend. Available in navy, charcoal, and black.", descAr: "بدلة مكونة من ثلاث قطع من الصوف الممتاز. متوفرة بألوان كحلي وفحمي وأسود.", img: "corp-exec-suit.png" },
+          { id: "business-shirt", title: "Business Dress Shirt", titleAr: "قميص العمل الرسمي", desc: "Crisp cotton shirts with embroidery option. Perfect for daily corporate wear.", descAr: "قمصان قطنية أنيقة مع خيار التطريز. مثالية للارتداء اليومي.", img: "corp-shirt.png" },
+          { id: "polo-shirt", title: "Corporate Polo Shirt", titleAr: "قميص بولو مؤسسي", desc: "Branded polo shirts in breathable piqué fabric. Ideal for outdoor and field staff.", descAr: "قميص بولو مع شعار الشركة، قماش بيكيه قابل للتنفس.", img: "corp-polo.png" },
+          { id: "ladies-abaya", title: "Ladies Corporate Abaya", titleAr: "عباية مؤسسية نسائية", desc: "Elegant abayas tailored for professional Omani women. Refined silhouette.", descAr: "عبايات أنيقة مصممة للمرأة العمانية المهنية.", img: "corp-abaya.png" },
+          { id: "reception-vest", title: "Reception Vest & Blazer", titleAr: "سترة الاستقبال والبليزر", desc: "Smart vests and blazers for front-desk and reception staff.", descAr: "سترات وجاكيتات للطواقم الاستقبالية.", img: "corp-vest.png" },
+          { id: "trousers", title: "Tailored Dress Trousers", titleAr: "بناطيل رسمية مفصلة", desc: "Custom-fit trousers in wrinkle-resistant fabric for all-day comfort.", descAr: "بناطيل مخصصة من قماش مقاوم للتجعد.", img: "corp-trousers.png" }
+        ]
+      },
+      healthcare: {
+        id: "healthcare",
+        title: "الرعاية الصحية والطبية",
+        subtitle: "ملابس طبية ومعاطف مختبر وملابس صحية فاخرة للطاقم الطبي.",
+        items: [
+          { id: "scrubs-set", title: "Medical Scrubs Set", titleAr: "طقم سكراب طبي", desc: "Lightweight, breathable scrubs in a range of clinical colors. Antibacterial finish.", descAr: "سكراب طبي خفيف وقابل للتنفس بألوان طبية متنوعة.", img: "health-scrubs.png" },
+          { id: "lab-coat", title: "Doctor Lab Coat", titleAr: "معطف طبيب المختبر", desc: "Premium white lab coats with deep pockets and embroidery options.", descAr: "معاطف بيضاء فاخرة مع جيوب عميقة وخيار التطريز.", img: "health-labcoat.png" },
+          { id: "nurse-uniform", title: "Nurse Uniform", titleAr: "زي الممرضة", desc: "Comfortable and hygienic nursing uniforms, available in multiple colors.", descAr: "زي تمريض مريح وصحي بألوان متعددة.", img: "health-nurse.png" },
+          { id: "patient-gown", title: "Patient Gown", titleAr: "رداء المريض", desc: "Soft, dignified patient gowns for hospitals and clinics.", descAr: "روب مريض ناعم وكريم للمستشفيات والعيادات.", img: "health-gown.png" },
+          { id: "surgical-cap", title: "Surgical Cap & Mask Set", titleAr: "طقم غطاء رأس وكمامة جراحية", desc: "Disposable and reusable surgical head covers with mask.", descAr: "أغطية رأس جراحية للاستخدام مرة واحدة أو قابلة لإعادة الاستخدام.", img: "health-cap.png" },
+          { id: "dental-uniform", title: "Dental Team Uniform", titleAr: "زي فريق طب الأسنان", desc: "Specialized uniforms for dental professionals — clean, modern, professional.", descAr: "زي متخصص لأطباء وطواقم الأسنان.", img: "health-dental.png" }
+        ]
+      },
+      hospitality: {
+        id: "hospitality",
+        title: "الضيافة",
+        subtitle: "زي أنيق للفنادق والمنتجعات وفرق الطهي.",
+        items: [
+          { id: "hotel-frontdesk", title: "Hotel Front Desk Uniform", titleAr: "زي موظف الاستقبال الفندقي", desc: "Elegant, polished uniforms for hotel reception teams.", descAr: "زي أنيق ومتقن لفرق استقبال الفنادق.", img: "hosp-frontdesk.png" },
+          { id: "housekeeping", title: "Housekeeping Uniform", titleAr: "زي الغرف والتدبير المنزلي", desc: "Functional and neat uniforms for housekeeping staff.", descAr: "زي وظيفي وأنيق لموظفي التدبير المنزلي.", img: "hosp-housekeeping.png" },
+          { id: "chef-uniform", title: "Chef & Kitchen Uniform", titleAr: "زي الشيف والمطبخ", desc: "Classic white chef coats and kitchen uniforms built for durability.", descAr: "معطف الشيف الكلاسيكي وزي المطبخ المصنوع للمتانة.", img: "hosp-chef.png" },
+          { id: "bellboy", title: "Bellboy & Concierge Uniform", titleAr: "زي حامل الأمتعة والكونسيرج", desc: "Commanding, formal attire for bellboys and concierge services.", descAr: "زي رسمي مهيب لحاملي الأمتعة وموظفي الكونسيرج.", img: "hosp-bellboy.png" },
+          { id: "waiter-uniform", title: "Waiter & Banquet Staff Uniform", titleAr: "زي النادل وطاقم المناسبات", desc: "Classic black and white waiter uniforms for fine-dining and events.", descAr: "زي كلاسيكي أبيض وأسود للنوادل وفرق المناسبات.", img: "hosp-waiter.png" },
+          { id: "spa-uniform", title: "Spa & Wellness Uniform", titleAr: "زي السبا والعافية", desc: "Soft, elegant uniforms for spa therapists and wellness centers.", descAr: "زي ناعم وأنيق لمعالجي السبا ومراكز العافية.", img: "hosp-spa.png" }
+        ]
+      },
+      industrial: {
+        id: "industrial",
+        title: "الصناعة والسلامة",
+        subtitle: "معدات عالية الوضوح ومقاومة للهب لقطاعات النفط والغاز والبناء.",
+        items: [
+          { id: "hi-vis-vest", title: "High-Visibility Safety Vest", titleAr: "سترة السلامة عالية الوضوح", desc: "EN ISO-compliant reflective vests for site workers.", descAr: "سترات عاكسة متوافقة مع معايير السلامة لعمال المواقع.", img: "ind-hivis.png" },
+          { id: "coverall", title: "Industrial Coverall", titleAr: "ملابس الغطاء الصناعي", desc: "Durable one-piece coveralls for oil, gas, and construction sectors.", descAr: "ملابس غطاء متينة من قطعة واحدة لقطاعات النفط والغاز والبناء.", img: "ind-coverall.png" },
+          { id: "fr-jacket", title: "Flame-Resistant Jacket", titleAr: "جاكيت مقاوم للهب", desc: "Certified FR jackets offering protection in high-heat environments.", descAr: "جاكيتات مقاومة للهب معتمدة للبيئات عالية الحرارة.", img: "ind-frjacket.png" },
+          { id: "safety-helmet", title: "Safety Helmet & PPE Kit", titleAr: "خوذة السلامة وطقم الحماية", desc: "Complete PPE kits including helmet, gloves, and safety glasses.", descAr: "طقم حماية شخصية كامل يشمل الخوذة والقفازات ونظارات الأمان.", img: "ind-helmet.png" },
+          { id: "welding-suit", title: "Welding Protective Suit", titleAr: "بدلة وقاية اللحام", desc: "Heavy-duty leather and FR fabric suits for welders.", descAr: "بدلات من الجلد والقماش المقاوم للهب لعمال اللحام.", img: "ind-welding.png" },
+          { id: "work-boots", title: "Safety Work Boots", titleAr: "حذاء العمل الآمن", desc: "Steel-toe, slip-resistant boots for demanding work environments.", descAr: "أحذية بمقدمة فولاذية ومقاومة للانزلاق.", img: "ind-boots.png" }
+        ]
+      },
+      security: {
+        id: "security",
+        title: "قوات الأمن",
+        subtitle: "ملابس وظيفية ذات طابع مهيب للحراس وأفراد الأمن.",
+        items: [
+          { id: "guard-uniform", title: "Security Guard Uniform", titleAr: "زي حارس الأمن", desc: "Professional, commanding uniforms for security personnel.", descAr: "زي احترافي ومهيب لأفراد الأمن.", img: "sec-guard.png" },
+          { id: "patrol-jacket", title: "Patrol Jacket", titleAr: "جاكيت الدورية", desc: "Tactical patrol jackets with multiple pockets for outdoor guards.", descAr: "جاكيتات دورية تكتيكية بجيوب متعددة للحراس الخارجيين.", img: "sec-patrol.png" },
+          { id: "access-control", title: "Access Control Staff Uniform", titleAr: "زي موظف التحكم بالدخول", desc: "Smart, formal uniforms for gatehouse and access control teams.", descAr: "زي رسمي أنيق لطواقم البوابات والتحكم بالدخول.", img: "sec-access.png" },
+          { id: "vip-protection", title: "VIP Protection Suit", titleAr: "بدلة حماية الشخصيات", desc: "Discreet, professional suits for executive protection details.", descAr: "بدلات احترافية وغير لافتة لفرق حماية الشخصيات.", img: "sec-vip.png" },
+          { id: "k9-handler", title: "K9 Handler Uniform", titleAr: "زي مدرب الكلاب الأمنية", desc: "Durable, functional uniforms for canine security teams.", descAr: "زي متين ووظيفي لفرق الكلاب الأمنية.", img: "sec-k9.png" },
+          { id: "event-security", title: "Event Security Uniform", titleAr: "زي أمن الفعاليات", desc: "High-visibility branded uniforms for crowd control and events.", descAr: "زي بألوان واضحة ومطبوع للتحكم بالحشود والفعاليات.", img: "sec-event.png" }
+        ]
+      },
+      school: {
+        id: "school",
+        title: "الزي المدرسي",
+        subtitle: "زي متين ومريح وأنيق للمؤسسات التعليمية.",
+        items: [
+          { id: "boys-uniform", title: "Boys School Uniform", titleAr: "زي الطلاب", desc: "Classic shirt and trouser sets available in multiple school colors.", descAr: "طقم قميص وبنطال كلاسيكي بألوان المدرسة المختلفة.", img: "sch-boys.png" },
+          { id: "girls-uniform", title: "Girls School Uniform", titleAr: "زي الطالبات", desc: "Neat, modest girls' uniforms with hijab options.", descAr: "زي أنيق ومحتشم للطالبات مع خيارات الحجاب.", img: "sch-girls.png" },
+          { id: "pe-kit", title: "PE & Sports Kit", titleAr: "طقم التربية الرياضية", desc: "Lightweight sportswear sets for physical education and school sports.", descAr: "طقم ملابس رياضية خفيفة للتربية الرياضية والرياضة المدرسية.", img: "sch-pe.png" },
+          { id: "teacher-uniform", title: "Teacher & Staff Uniform", titleAr: "زي المعلمين والطاقم", desc: "Professional, modest uniforms for teaching and admin staff.", descAr: "زي احترافي ومحتشم للمعلمين والطواقم الإدارية.", img: "sch-teacher.png" },
+          { id: "winter-jacket", title: "School Winter Jacket", titleAr: "جاكيت المدرسة الشتوي", desc: "Warm, durable winter jackets embroidered with school logo.", descAr: "جاكيت شتوي دافئ ومتين مطرز بشعار المدرسة.", img: "sch-winter.png" },
+          { id: "preschool", title: "Preschool & Kindergarten Uniform", titleAr: "زي رياض الأطفال", desc: "Soft, comfortable, and safe uniforms for young children.", descAr: "زي ناعم ومريح وآمن للأطفال الصغار.", img: "sch-preschool.png" }
+        ]
+      }
+    }
   },
 };

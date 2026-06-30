@@ -11,6 +11,7 @@ import Products from "./components/sections/Products";
 import WhyChooseUs from "./components/sections/WhyChooseUs";
 import Clients from "./components/sections/Clients";
 import Contact from "./components/sections/Contact";
+import CollectionPage from "./pages/CollectionPage";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/collections/:id" component={CollectionPage} />
       <Route component={NotFound} />
     </Switch>
   );
