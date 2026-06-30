@@ -11,6 +11,7 @@ import Products from "./components/sections/Products";
 import WhyChooseUs from "./components/sections/WhyChooseUs";
 import Clients from "./components/sections/Clients";
 import Contact from "./components/sections/Contact";
+import FindUs from "./components/sections/FindUs";
 import CollectionPage from "./pages/CollectionPage";
 import NotFound from "@/pages/not-found";
 
@@ -27,6 +28,7 @@ function Home() {
         <WhyChooseUs />
         <Clients />
         <Contact />
+        <FindUs />
       </main>
       <Footer />
     </div>
