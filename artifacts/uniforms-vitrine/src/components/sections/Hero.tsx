@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImg}
-          alt="Al Majd Uniforms"
+          alt="Muscat Meditex"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/40" />

@@ -4,6 +4,7 @@ import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import { content } from "@/lib/data";
+import logoImg from "@assets/WhatsApp_Image_2026-06-30_at_11.56.14_1782813402788.jpeg";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,10 +39,15 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <div className={`text-xl font-bold cursor-pointer transition-colors ${isScrolled ? "text-primary" : "text-white"}`}>
-              <div className="flex flex-col">
-                <span className="text-sm tracking-widest uppercase">AL MAJD</span>
-                <span className="text-xl font-arabic font-bold" dir="rtl">مجد للزي الرسمي</span>
+            <div className="cursor-pointer flex items-center gap-3">
+              <img
+                src={logoImg}
+                alt="Muscat Meditex"
+                className={`h-12 w-12 rounded-full object-cover transition-all ${isScrolled ? "ring-2 ring-primary/20" : "ring-2 ring-white/30"}`}
+              />
+              <div className={`text-base font-bold leading-tight transition-colors ${isScrolled ? "text-primary" : "text-white"}`}>
+                <div className="tracking-widest uppercase text-xs">MUSCAT MEDITEX</div>
+                <div className="font-arabic text-sm" dir="rtl">مسقط ميديتكس</div>
               </div>
             </div>
           </Link>

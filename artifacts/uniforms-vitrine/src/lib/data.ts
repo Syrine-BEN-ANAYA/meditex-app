@@ -8,14 +8,14 @@ export const content = {
       contact: "Contact",
     },
     hero: {
-      title: "Al Majd Uniforms",
+      title: "Muscat Meditex",
       subtitle: "Precision, Craftsmanship, and Local Identity",
       description: "Premium Omani uniform supplier serving hotels, hospitals, oil companies, schools, and government institutions across the Sultanate of Oman.",
       cta: "Contact Us Today",
     },
     about: {
       title: "Our Heritage & Expertise",
-      description: "Rooted in Omani culture, Al Majd Uniforms bridges the gap between traditional values and modern corporate professionalism. With years of experience serving the Sultanate's most prestigious institutions, we deliver garments that command respect and endure the demands of daily excellence.",
+      description: "Rooted in Omani culture, Muscat Meditex bridges the gap between traditional values and modern corporate professionalism. With years of experience serving the Sultanate's most prestigious institutions, we deliver garments that command respect and endure the demands of daily excellence.",
       stats: [
         { label: "Years Experience", value: "15+" },
         { label: "Client Sectors", value: "6+" },
@@ -64,7 +64,7 @@ export const content = {
       ],
     },
     whyUs: {
-      title: "Why Choose Al Majd?",
+      title: "Why Choose Muscat Meditex?",
       reasons: [
         { title: "Custom Tailoring", desc: "Bespoke fits ensuring every staff member looks their absolute best." },
         { title: "Bulk Orders", desc: "Capacity to handle massive institutional requirements efficiently." },
@@ -91,7 +91,7 @@ export const content = {
     footer: {
       tagline: "The standard of professional wear in Oman.",
       quickLinks: "Quick Links",
-      rights: "All rights reserved. Al Majd Uniforms.",
+      rights: "All rights reserved. Muscat Meditex.",
     },
   },
   ar: {
@@ -103,14 +103,14 @@ export const content = {
       contact: "اتصل بنا",
     },
     hero: {
-      title: "مجد للزي الرسمي",
+      title: "مسقط ميديتكس",
       subtitle: "الدقة، الحرفية، والهوية المحلية",
       description: "المورد العماني الرائد للزي الرسمي، نخدم الفنادق والمستشفيات وشركات النفط والمدارس والمؤسسات الحكومية في جميع أنحاء سلطنة عمان.",
       cta: "تواصل معنا اليوم",
     },
     about: {
       title: "تراثنا وخبرتنا",
-      description: "متجذرون في الثقافة العمانية، نجمع في 'مجد للزي الرسمي' بين القيم التقليدية والاحترافية المؤسسية الحديثة. مع سنوات من الخبرة في خدمة أرقى مؤسسات السلطنة، نقدم ملابس تفرض الاحترام وتتحمل متطلبات التميز اليومي.",
+      description: "متجذرون في الثقافة العمانية، نجمع في 'مسقط ميديتكس' بين القيم التقليدية والاحترافية المؤسسية الحديثة. مع سنوات من الخبرة في خدمة أرقى مؤسسات السلطنة، نقدم ملابس تفرض الاحترام وتتحمل متطلبات التميز اليومي.",
       stats: [
         { label: "سنوات الخبرة", value: "+١٥" },
         { label: "قطاعات العملاء", value: "+٦" },
@@ -159,7 +159,7 @@ export const content = {
       ],
     },
     whyUs: {
-      title: "لماذا تختار مجد؟",
+      title: "لماذا تختار مسقط ميديتكس؟",
       reasons: [
         { title: "تفصيل مخصص", desc: "مقاسات مخصصة تضمن ظهور كل موظف بأفضل صورة." },
         { title: "الطلبات الكبيرة", desc: "القدرة على تلبية متطلبات المؤسسات الضخمة بكفاءة." },
@@ -186,7 +186,7 @@ export const content = {
     footer: {
       tagline: "معيار الملابس المهنية في عمان.",
       quickLinks: "روابط سريعة",
-      rights: "جميع الحقوق محفوظة. مجد للزي الرسمي.",
+      rights: "جميع الحقوق محفوظة. مسقط ميديتكس.",
     },
   },
 };

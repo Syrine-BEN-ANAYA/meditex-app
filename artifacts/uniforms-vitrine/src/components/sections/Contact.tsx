@@ -50,23 +50,23 @@ export default function Contact() {
                 </div>
               </a>
 
-              <a href="mailto:info@almajduniforms.com" className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border shadow-sm hover:border-secondary hover:shadow-md transition-all group">
+              <a href="mailto:info@muscatmeditex.com" className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border shadow-sm hover:border-secondary hover:shadow-md transition-all group">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:text-secondary group-hover:bg-secondary/10 transition-colors">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Email</div>
-                  <div className="text-muted-foreground">info@almajduniforms.com</div>
+                  <div className="text-muted-foreground">info@muscatmeditex.com</div>
                 </div>
               </a>
 
-              <a href="https://instagram.com/almajduniforms" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border shadow-sm hover:border-secondary hover:shadow-md transition-all group">
+              <a href="https://instagram.com/muscatmeditex" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border shadow-sm hover:border-secondary hover:shadow-md transition-all group">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:text-secondary group-hover:bg-secondary/10 transition-colors">
                   <SiInstagram className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Instagram</div>
-                  <div className="text-muted-foreground">@almajduniforms</div>
+                  <div className="text-muted-foreground">@muscatmeditex</div>
                 </div>
               </a>
             </div>
