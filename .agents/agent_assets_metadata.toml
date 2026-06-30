@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "9i1KCDB_2lq2rGplpzIME"
+uri = "file://artifacts/uniforms-vitrine/src/assets/hero.png"
+type = "image"
+title = "Hero uniforms group shot"
+
+[[generated]]
+id = "HJdiMb8mPgbq9Sgzc7bgl"
+uri = "file://artifacts/uniforms-vitrine/src/assets/corporate.png"
+type = "image"
+title = "Corporate suit"
+
+[[generated]]
+id = "oQTgEF_6eduKkG0EpUBO7"
+uri = "file://artifacts/uniforms-vitrine/src/assets/healthcare.png"
+type = "image"
+title = "Healthcare scrubs"
+
+[[generated]]
+id = "vp8akXDejhQyvSgMz9Jj9"
+uri = "file://artifacts/uniforms-vitrine/src/assets/hospitality.png"
+type = "image"
+title = "Hospitality uniform"
+
+[[generated]]
+id = "iTYmrtpLLVG-9Y-VPXckD"
+uri = "file://artifacts/uniforms-vitrine/src/assets/industrial.png"
+type = "image"
+title = "Industrial safety uniform"
+
+[[generated]]
+id = "b8ZwByvM1iHoxUPRBtp1L"
+uri = "file://artifacts/uniforms-vitrine/src/assets/security.png"
+type = "image"
+title = "Security uniform"
+
+[[generated]]
+id = "pA9Bbxn1QgIYd30jBPS_I"
+uri = "file://artifacts/uniforms-vitrine/src/assets/school.png"
+type = "image"
+title = "School uniform"
