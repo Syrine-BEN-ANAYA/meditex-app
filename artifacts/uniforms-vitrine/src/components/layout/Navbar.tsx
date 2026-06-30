@@ -40,14 +40,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/">
             <div className="cursor-pointer flex items-center gap-3">
-              <img
-                src={logoImg}
-                alt="Muscat Meditex"
-                className={`h-12 w-12 rounded-full object-cover transition-all ${isScrolled ? "ring-2 ring-primary/20" : "ring-2 ring-white/30"}`}
-              />
-              <div className={`text-base font-bold leading-tight transition-colors ${isScrolled ? "text-primary" : "text-white"}`}>
-                <div className="tracking-widest uppercase text-xs">MUSCAT MEDITEX</div>
-                <div className="font-arabic text-sm" dir="rtl">مسقط ميديتكس</div>
+              <div className={`rounded-xl p-1.5 transition-all ${isScrolled ? "bg-white shadow-md ring-1 ring-secondary/20" : "bg-white shadow-xl ring-2 ring-secondary/30"}`}>
+                <img
+                  src={logoImg}
+                  alt="Muscat Meditex"
+                  className="h-10 w-10 object-contain rounded-lg"
+                />
+              </div>
+              <div className={`font-bold leading-tight transition-colors ${isScrolled ? "text-primary" : "text-white"}`}>
+                <div className="tracking-[0.2em] uppercase text-xs font-semibold">MUSCAT MEDITEX</div>
+                <div className="font-arabic text-xs opacity-70" dir="rtl">مسقط ميديتكس</div>
               </div>
             </div>
           </Link>

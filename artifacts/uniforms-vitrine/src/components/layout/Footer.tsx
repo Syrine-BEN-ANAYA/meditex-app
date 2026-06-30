@@ -15,8 +15,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <img src={logoImg} alt="Muscat Meditex" className="h-14 w-14 rounded-full object-cover ring-2 ring-secondary/40" />
+            <div className="flex items-center gap-4">
+              <div className="bg-white rounded-xl p-2 shadow-lg">
+                <img src={logoImg} alt="Muscat Meditex" className="h-16 w-16 object-contain rounded-lg" />
+              </div>
               <div className="text-primary-foreground font-bold leading-tight">
                 <div className="tracking-widest uppercase text-xs text-secondary">MUSCAT MEDITEX</div>
                 <div className="font-arabic text-sm">مسقط ميديتكس</div>
