@@ -44,7 +44,6 @@ logs/
 # Cache
 .cache/
 *.tsbuildinfo
-
 # Coverage
 coverage/
 .nyc_output/
@@ -52,3 +51,5 @@ coverage/
 # Temp files
 *.tmp
 *.temp
+
+.replit

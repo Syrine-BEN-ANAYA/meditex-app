@@ -1,3 +1,4 @@
+
 # Muscat Meditex — Professional Showcase Website
 
 Bilingual (Arabic / English) showcase website with an admin panel for Muscat Meditex, a supplier of professional uniforms based in Muscat, Oman.
@@ -61,14 +62,14 @@ Create a `.env` file at the root or configure these variables:
 ```bash
 cd artifacts/frontend
 pnpm dev
-# Available at http://localhost:25595
+# Available at http://localhost:5173
 ```
 
 ### Backend (API + admin)
 ```bash
 cd artifacts/backend
 pnpm dev
-# Available at http://localhost:8080
+# Available at http://localhost:3000
 ```
 
 ### Database Migration
@@ -90,7 +91,7 @@ pnpm run push
 - **Bilingual showcase** Arabic / English with RTL/LTR toggle
 - **6 uniform collections**: Corporate, Healthcare, Hospitality, Industrial, Security, School
 - **Collection detail pages** with product galleries
-- **"Find Us" section** with an SVG map of Muscat, address, and opening hours
+- **"Find Us"** section with an SVG map of Muscat, address, and opening hours
 - **Contact form** via WhatsApp / Email / Instagram
 
 ### Admin Panel (`/admin`)
@@ -129,3 +130,5 @@ pnpm run push
 ## Delivered by
 
 Developed for **Muscat Meditex** — The standard for professional uniforms in Oman.
+```
+
