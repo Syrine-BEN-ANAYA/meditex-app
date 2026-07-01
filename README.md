@@ -117,15 +117,7 @@ pnpm run push
 | Monorepo  | pnpm workspaces                            |
 
 ---
-
-## Contact Information Displayed on the Site
-
-- **WhatsApp**: +968 9123 4567
-- **Email**: info@muscatmeditex.com
-- **Instagram**: @muscatmeditex
-- **Address**: Industrial Area, Al Misfah, Muscat, Sultanate of Oman
-
----
+-
 
 ## Delivered by
 
