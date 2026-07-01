@@ -124,3 +124,4 @@ pnpm run push
 Developed for **Muscat Meditex** — The standard for professional uniforms in Oman.
 ```
 
+DEMO => meditex-app-frontend.vercel.app
