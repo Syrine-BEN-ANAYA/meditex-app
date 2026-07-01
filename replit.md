@@ -1,45 +1,63 @@
-# [Project name]
+# Muscat Meditex — Vitrine Pro
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Site vitrine bilingue (AR/EN) + panel admin pour la société de tenues professionnelles Muscat Meditex (Oman).
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- `pnpm --filter @workspace/api-server run dev` — API backend (port 8080)
+- `pnpm --filter @workspace/uniforms-vitrine run dev` — Frontend vitrine (port 25595)
+- `pnpm run typecheck` — typecheck complet
+- `pnpm --filter @workspace/db run push` — pousser le schéma DB (dev uniquement)
+- Env requis : `DATABASE_URL`, `SESSION_SECRET`, `ADMIN_PASSWORD`
+
+## Structure du projet
+
+```
+artifacts/
+  uniforms-vitrine/   ← Frontend React+Vite (site public)
+  api-server/         ← Backend Express (API + admin)
+lib/
+  db/                 ← Schéma PostgreSQL + Drizzle ORM
+  api-spec/           ← Spécification OpenAPI
+  api-zod/            ← Schémas Zod générés
+  api-client-react/   ← Hooks React Query générés
+```
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Frontend : React 19, Vite, Tailwind CSS v4, shadcn/ui, framer-motion, wouter
+- Backend : Express 5, express-session, multer
+- DB : PostgreSQL + Drizzle ORM
+- Auth admin : session cookie + `ADMIN_PASSWORD` env var
 
-## Where things live
+## Fonctionnalités
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- Site public bilingue AR/EN avec toggle RTL/LTR
+- 6 collections de tenues avec pages détail et images produits
+- Section "Nous trouver" avec carte SVG stylisée de Muscat
+- **Panel admin** accessible sur `/admin` :
+  - Connexion protégée (mot de passe via env `ADMIN_PASSWORD`, défaut : `admin1234`)
+  - Éditeur de textes bilingues (hero, about, contact, footer…)
+  - Gestionnaire de collections (titre, sous-titre, images de couverture)
+  - Gestionnaire de produits par collection (nom, description, image)
+  - Upload d'images (sauvegardées dans `artifacts/api-server/public/uploads/`)
 
-## Architecture decisions
+## Schéma DB
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
-
-## Product
-
-_Describe the high-level user-facing capabilities of this app once they exist._
+- `site_content` — textes clé/valeur bilingues (EN + AR)
+- `collections_content` — métadonnées des 6 collections
+- `products_content` — produits par collection
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Interface admin en français
+- Branding : vert royal (#1B4332) + or/sable (#B8960C)
+- Bilinguisme AR/EN partout, RTL pour l'arabe
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
-
-## Pointers
-
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- Après modification du schéma DB, relancer `pnpm --filter @workspace/db run push`
+- Le frontend charge le contenu depuis l'API ; en cas d'échec, il utilise les données statiques de `data.ts`
+- Les images uploadées sont servies par l'API à `/api/uploads/<filename>`
+- Changer `ADMIN_PASSWORD` via les secrets Replit (onglet "Secrets")

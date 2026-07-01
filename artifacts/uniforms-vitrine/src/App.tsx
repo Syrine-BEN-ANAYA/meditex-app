@@ -13,6 +13,7 @@ import Clients from "./components/sections/Clients";
 import Contact from "./components/sections/Contact";
 import FindUs from "./components/sections/FindUs";
 import CollectionPage from "./pages/CollectionPage";
+import AdminRouter from "./pages/admin/AdminRouter";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,8 @@ function Home() {
 function Router() {
   return (
     <Switch>
+      <Route path="/admin" component={AdminRouter} />
+      <Route path="/admin/:rest*" component={AdminRouter} />
       <Route path="/" component={Home} />
       <Route path="/collections/:id" component={CollectionPage} />
       <Route component={NotFound} />
