@@ -1,49 +1,54 @@
-# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# Node.js / pnpm
+node_modules/
+.pnpm-store/
+dist/
+build/
+*.log
+npm-debug.log*
+pnpm-debug.log*
 
-# compiled output
-dist
-tmp
-out-tsc
-*.tsbuildinfo
-.expo
-.expo-shared
+# Environnement
+.env
+.env.local
+.env.*.local
+*.env
 
-# dependencies
-node_modules
+# Drizzle (migrations générées)
+lib/db/drizzle/
+lib/db/migrations/
 
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+# Fichiers de build du backend
+artifacts/backend/dist/
+artifacts/backend/public/uploads/
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# Fichiers de build du frontend
+artifacts/frontend/dist/
+artifacts/frontend/public/
 
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# System Files
+# OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
-.cursor/rules/nx-rules.mdc
-.github/instructions/nx.instructions.md
+# Logs
+logs/
+*.log
 
-# Replit
+# Cache
 .cache/
-.local/
+*.tsbuildinfo
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Temp files
+*.tmp
+*.temp
