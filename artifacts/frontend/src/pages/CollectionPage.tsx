@@ -37,8 +37,8 @@ export default function CollectionPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground">
         <h1 className="text-4xl font-bold mb-4">Collection Not Found</h1>
-        <Link href="/#products">
-          <Button>Return to Collections</Button>
+        <Link href="/products">
+          <Button className="cursor-pointer">Return to Collections</Button>
         </Link>
       </div>
     );
@@ -59,24 +59,28 @@ export default function CollectionPage() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
   };
 
+  const handleRequestQuote = () => {
+    // Redirect to contact page with pre-filled interest slug
+    window.location.href = `/contact?interest=${id}`;
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Navbar />
       
       <main className="flex-1">
         {/* Hero Section */}
-        <div className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-primary text-primary-foreground">
-          <div className="absolute inset-0 z-0 opacity-20">
-            <img
-              src={coverImages[id!]}
-              alt={collection.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-primary to-primary/80 z-10" />
+        <div className="relative min-h-[56vh] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden text-primary-foreground">
+          <img
+            src={coverImages[id!]}
+            alt={collection.title}
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/82 via-black/54 to-black/18 z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background to-transparent z-10" />
           
           <div className="container mx-auto px-4 md:px-6 relative z-20">
-            <Link href="/#products" className="inline-block mb-8 text-primary-foreground/80 hover:text-white transition-colors">
+            <Link href="/products" className="inline-block mb-8 text-primary-foreground/80 hover:text-white transition-colors">
               <span className="flex items-center gap-2 font-medium">
                 {language === "en" ? "← All Collections" : "← جميع المجموعات"}
               </span>
@@ -87,7 +91,7 @@ export default function CollectionPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-sm">
                 {collection.title}
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl">
@@ -110,7 +114,7 @@ export default function CollectionPage() {
                 <motion.div 
                   key={item.id}
                   variants={cardVariants}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-border flex flex-col group"
+                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-secondary/35 transition-all border border-border flex flex-col group"
                 >
                   <div className="aspect-square relative overflow-hidden bg-muted">
                     {getProductImage(item.img) ? (
@@ -135,16 +139,14 @@ export default function CollectionPage() {
                     <h3 className="text-xl font-bold text-primary mb-3">
                       {language === "en" ? item.title : item.titleAr}
                     </h3>
-                    <p className="text-muted-foreground flex-1 mb-6">
+                    <p className="text-muted-foreground flex-1 mb-6 text-sm">
                       {language === "en" ? item.desc : item.descAr}
                     </p>
                     
                     <Button 
-                      className="w-full mt-auto"
+                      className="w-full mt-auto cursor-pointer"
                       variant="default"
-                      onClick={() => {
-                        window.location.href = '/#contact';
-                      }}
+                      onClick={handleRequestQuote}
                     >
                       {language === "en" ? "Request Quote" : "طلب عرض سعر"}
                     </Button>

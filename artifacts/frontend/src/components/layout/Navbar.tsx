@@ -1,124 +1,175 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import { content } from "@/lib/data";
-import logoImg from "@assets/WhatsApp_Image_2026-06-30_at_11.56.14_1782813402788.jpeg";
+import Logo from "@/components/ui/Logo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, toggleLanguage, dir } = useLanguage();
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const [location] = useLocation();
+
   const t = content[language].nav;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setIsScrolled(window.scrollY > 30);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const navLinks = [
-    { href: "#about", label: t.about },
-    { href: "#products", label: t.products },
-    { href: "#why-us", label: t.whyUs },
-    { href: "#clients", label: t.clients },
-    { href: "#contact", label: t.contact },
+    { href: "/", label: t.home },
+    { href: "/about", label: t.about },
+    { href: "/products", label: t.products },
+    { href: "/contact", label: t.contact },
   ];
 
+  const isActive = (href: string) => location === href;
+
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-5"
-      }`}
-    >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between">
-          <Link href="/">
-            <div className="cursor-pointer flex items-center gap-3">
-              <div className={`rounded-xl p-1.5 transition-all ${isScrolled ? "bg-white shadow-md ring-1 ring-secondary/20" : "bg-white shadow-xl ring-2 ring-secondary/30"}`}>
-                <img
-                  src={logoImg}
-                  alt="Muscat Meditex"
-                  className="h-10 w-10 object-contain rounded-lg"
-                />
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center">
+
+      {/* GLASS NAV */}
+      <motion.nav
+        animate={{
+          scale: isScrolled ? 0.96 : 1,
+          y: isScrolled ? 10 : 18,
+        }}
+        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+        className="mt-4"
+      >
+        <div className="relative">
+
+          {/* BACKGROUND GLASS */}
+          <div className="absolute inset-0 rounded-3xl bg-white/10 backdrop-blur-2xl border border-white/10 shadow-xl" />
+
+          <div className="relative flex items-center gap-10 px-8 py-4">
+
+            {/* LOGO */}
+            <Link href="/">
+              <div className="flex items-center select-none">
+                <Logo className="h-10 md:h-12 text-secondary" showText={true} />
               </div>
-              <div className={`font-bold leading-tight transition-colors ${isScrolled ? "text-primary" : "text-white"}`}>
-                <div className="tracking-[0.2em] uppercase text-xs font-semibold">MUSCAT MEDITEX</div>
-                <div className="font-arabic text-xs opacity-70" dir="rtl">مسقط ميديتكس</div>
-              </div>
+            </Link>
+
+            {/* LINKS */}
+            <div className="hidden md:flex items-center gap-2">
+              {navLinks.map((link) => {
+                const active = isActive(link.href);
+
+                return (
+                  <Link key={link.href} href={link.href}>
+                    <motion.div
+                      whileHover={{
+                        y: -2,
+                        scale: 1.07,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 18,
+                      }}
+                      className="relative px-4 py-2 cursor-pointer"
+                    >
+                      <span
+                        className={`text-sm font-medium transition-colors duration-300 ${
+                          active
+                            ? "text-secondary"
+                            : "text-white/80 hover:text-white"
+                        }`}
+                      >
+                        {link.label}
+                      </span>
+
+                      {/* underline */}
+                      <motion.div
+                        className="absolute left-1/2 -translate-x-1/2 -bottom-1 h-[2px] rounded-full bg-secondary"
+                        initial={{ width: 0, opacity: 0 }}
+                        animate={{
+                          width: active ? 20 : 0,
+                          opacity: active ? 1 : 0,
+                        }}
+                        whileHover={{
+                          width: 40,
+                          opacity: 1,
+                        }}
+                        transition={{ duration: 0.25 }}
+                      />
+                    </motion.div>
+                  </Link>
+                );
+              })}
             </div>
-          </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-secondary ${
-                  isScrolled ? "text-foreground" : "text-white/90"
-                }`}
+            {/* ACTIONS */}
+            <div className="flex items-center gap-3">
+
+              <Button
+                onClick={toggleLanguage}
+                className="rounded-full bg-white/10 border border-white/10 text-white hover:bg-white/20 transition"
               >
-                {link.label}
-              </a>
-            ))}
-            
-            <Button
-              variant={isScrolled ? "outline" : "secondary"}
-              size="sm"
-              onClick={toggleLanguage}
-              className={`flex items-center gap-2 ${
-                isScrolled 
-                  ? "border-primary/20 text-primary hover:bg-primary/5" 
-                  : "bg-white/10 border-white/20 text-white hover:bg-white/20"
-              }`}
-            >
-              <Globe className="w-4 h-4" />
-              <span>{language === "en" ? "عربي" : "EN"}</span>
-            </Button>
+                <Globe className="w-4 h-4 mr-2" />
+                {language === "en" ? "AR" : "EN"}
+              </Button>
+
+              <button
+                onClick={() => setIsMobileOpen(!isMobileOpen)}
+                className="md:hidden p-2 rounded-full bg-white/10 text-white"
+              >
+                {isMobileOpen ? <X /> : <Menu />}
+              </button>
+            </div>
           </div>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className={`md:hidden p-2 ${isScrolled ? "text-primary" : "text-white"}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </button>
         </div>
-      </div>
+      </motion.nav>
 
-      {/* Mobile Nav */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-border shadow-lg p-4 flex flex-col space-y-4">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-foreground font-medium p-2 hover:bg-muted rounded-md"
-            >
-              {link.label}
-            </a>
-          ))}
-          <Button
-            variant="outline"
-            className="w-full justify-center flex items-center gap-2"
-            onClick={() => {
-              toggleLanguage();
-              setIsMobileMenuOpen(false);
-            }}
+      {/* MOBILE */}
+      <AnimatePresence>
+        {isMobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            className="fixed top-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm"
           >
-            <Globe className="w-4 h-4" />
-            <span>{language === "en" ? "التبديل للعربية" : "Switch to English"}</span>
-          </Button>
-        </div>
-      )}
-    </nav>
+            <div className="bg-black/70 backdrop-blur-2xl border border-white/10 rounded-3xl p-5 space-y-3">
+
+              {navLinks.map((link) => {
+                const active = isActive(link.href);
+
+                return (
+                  <Link key={link.href} href={link.href}>
+                    <div
+                      onClick={() => setIsMobileOpen(false)}
+                      className={`p-3 rounded-xl text-sm font-medium transition ${
+                        active
+                          ? "bg-secondary/20 text-secondary"
+                          : "text-white/80"
+                      }`}
+                    >
+                      {link.label}
+                    </div>
+                  </Link>
+                );
+              })}
+
+              <Button
+                onClick={() => {
+                  toggleLanguage();
+                  setIsMobileOpen(false);
+                }}
+                className="w-full bg-white/10 text-white border border-white/10"
+              >
+                {language === "en" ? "Switch AR" : "English"}
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

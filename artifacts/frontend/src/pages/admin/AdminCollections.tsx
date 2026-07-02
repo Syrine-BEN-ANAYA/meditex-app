@@ -8,15 +8,31 @@ type Collection = {
 };
 type Product = {
   id: string; collectionId: string; titleEn: string; titleAr: string;
-  descEn: string; descAr: string; image?: string | null;
+  descEn: string; descAr: string; image?: string | null; displayOrder?: number | null;
 };
 
 const COLLECTION_IDS = ["corporate", "healthcare", "hospitality", "industrial", "security", "school"];
+const assetImages = import.meta.glob<{ default: string }>("../../assets/*", { eager: true });
+
+function imageSrc(image?: string | null) {
+  if (!image) return "";
+  if (image.startsWith("blob:") || image.startsWith("/") || image.startsWith("http")) return image;
+  return assetImages[`../../assets/${image}`]?.default || `/src/assets/${image}`;
+}
 
 function staticCollection(id: string): Collection {
   const c = (staticContent.en.collections as Record<string, { title: string; subtitle: string }>)[id];
   const ca = (staticContent.ar.collections as Record<string, { title: string; subtitle: string }>)[id];
-  return { id, titleEn: c?.title || "", titleAr: ca?.title || "", subtitleEn: c?.subtitle || "", subtitleAr: ca?.subtitle || "" };
+  const card = staticContent.en.products.items.find(item => item.id === id);
+  return {
+    id,
+    titleEn: c?.title || "",
+    titleAr: ca?.title || "",
+    subtitleEn: c?.subtitle || "",
+    subtitleAr: ca?.subtitle || "",
+    coverImage: card?.img || null,
+    displayOrder: COLLECTION_IDS.indexOf(id),
+  };
 }
 
 function staticProducts(collectionId: string): Product[] {
@@ -58,7 +74,7 @@ function ImageUpload({ current, onUploaded }: { current?: string | null; onUploa
     <div className="flex items-center gap-3">
       {preview && (
         <img
-          src={preview.startsWith("blob:") || preview.startsWith("/") ? preview : `/src/assets/${preview}`}
+          src={imageSrc(preview)}
           alt="preview"
           className="w-14 h-14 object-cover rounded-lg border border-gray-200"
           onError={e => { (e.target as HTMLImageElement).style.display = "none"; }}
@@ -150,7 +166,7 @@ export default function AdminCollections() {
     <div className="p-8">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Collections & Products</h1>
-        <p className="text-gray-500 mt-1">Manage the 6 collections of outfits and their products</p>
+        <p className="text-gray-500 mt-1">Manage collection cards, cover images, product texts and product images</p>
       </div>
 
       <div className="space-y-3">
@@ -161,6 +177,14 @@ export default function AdminCollections() {
               className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition"
             >
               <div className="flex items-center gap-4">
+                {c.coverImage && (
+                  <img
+                    src={imageSrc(c.coverImage)}
+                    alt=""
+                    className="w-12 h-12 rounded-lg object-cover border border-gray-200"
+                    onError={e => { (e.target as HTMLImageElement).style.display = "none"; }}
+                  />
+                )}
                 <span className="w-8 h-8 bg-[var(--color-primary)] bg-opacity-10 rounded-lg flex items-center justify-center text-[var(--color-primary)] font-bold text-xs uppercase">
                   {c.id.slice(0, 2)}
                 </span>

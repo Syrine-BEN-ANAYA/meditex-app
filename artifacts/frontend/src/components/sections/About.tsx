@@ -1,4 +1,6 @@
+import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import { content } from "@/lib/data";
 
@@ -21,9 +23,17 @@ export default function About() {
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto mb-8 rounded-full" />
             
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-16">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
               {t.description}
             </p>
+
+            <div className="mb-16">
+              <Button variant="outline" className="border-secondary hover:border-secondary/80 text-primary hover:bg-secondary/10 font-bold px-6 py-3.5 h-auto cursor-pointer" asChild>
+                <Link href="/about">
+                  <span>{language === "en" ? "Learn More About Us" : "تعرف أكثر علينا"}</span>
+                </Link>
+              </Button>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {t.stats.map((stat, index) => (
@@ -33,12 +43,12 @@ export default function About() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="p-6 rounded-2xl bg-muted/50 border border-border/50"
+                  className="p-6 rounded-2xl bg-muted/50 border border-border/50 shadow-sm"
                 >
                   <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                  <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
                     {stat.label}
                   </div>
                 </motion.div>

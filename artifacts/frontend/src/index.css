@@ -51,52 +51,65 @@
 }
 
 :root {
+  /* Couleurs de base */
   --background: 0 0% 100%;
-  --foreground: 220 15% 15%;
-  --border: 153 15% 90%;
-  --input: 153 15% 90%;
-  --ring: 153 50% 20%;
-  
+  --foreground: 215 73% 15%;
+  /* Bleu profond pour le texte */
+  --border: 215 20% 85%;
+  --input: 215 20% 85%;
+  --ring: 215 73% 15%;
+  /* Anneau de focus bleu */
+
+  /* Cartes */
   --card: 0 0% 100%;
-  --card-foreground: 220 15% 15%;
-  --card-border: 153 15% 90%;
-  
+  --card-foreground: 215 73% 15%;
+  --card-border: 215 20% 85%;
+
+  /* Popovers */
   --popover: 0 0% 100%;
-  --popover-foreground: 220 15% 15%;
-  --popover-border: 153 15% 90%;
-  
-  --primary: 153 50% 20%; /* Deep Royal Green */
+  --popover-foreground: 215 73% 15%;
+  --popover-border: 215 20% 85%;
+
+  /* Primaire = Bleu profond */
+  --primary: 215 73% 15%;
   --primary-foreground: 0 0% 100%;
-  
-  --secondary: 40 85% 55%; /* Warm Gold */
-  --secondary-foreground: 153 50% 20%;
-  
-  --muted: 153 10% 95%;
-  --muted-foreground: 153 10% 40%;
-  
-  --accent: 40 85% 55%;
-  --accent-foreground: 153 50% 20%;
-  
+
+  /* Secondaire = Doré */
+  --secondary: 45 65% 52%;
+  --secondary-foreground: 215 73% 15%;
+
+  /* Muted = bleu très clair */
+  --muted: 215 30% 96%;
+  --muted-foreground: 215 20% 40%;
+
+  /* Accent = Doré (identique au secondaire) */
+  --accent: 45 65% 52%;
+  --accent-foreground: 215 73% 15%;
+
+  /* Destructive (rouge conservé) */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
+  /* Polices */
   --app-font-sans: 'Cairo', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
   --radius: 0.5rem;
 
-  --shadow-2xs: 0px 2px 0px 0px hsl(153 50% 20% / 0.05);
-  --shadow-xs: 0px 2px 0px 0px hsl(153 50% 20% / 0.05);
-  --shadow-sm: 0px 2px 0px 0px hsl(153 50% 20% / 0.05), 0px 1px 2px -1px hsl(153 50% 20% / 0.05);
-  --shadow: 0px 2px 0px 0px hsl(153 50% 20% / 0.05), 0px 1px 2px -1px hsl(153 50% 20% / 0.05);
-  --shadow-md: 0px 2px 0px 0px hsl(153 50% 20% / 0.05), 0px 2px 4px -1px hsl(153 50% 20% / 0.1);
-  --shadow-lg: 0px 2px 0px 0px hsl(153 50% 20% / 0.05), 0px 4px 6px -1px hsl(153 50% 20% / 0.1);
-  --shadow-xl: 0px 2px 0px 0px hsl(153 50% 20% / 0.05), 0px 8px 10px -1px hsl(153 50% 20% / 0.1);
-  --shadow-2xl: 0px 2px 0px 0px hsl(153 50% 20% / 0.1);
+  /* Ombres – teinte bleue */
+  --shadow-2xs: 0px 2px 0px 0px hsl(215 73% 15% / 0.05);
+  --shadow-xs: 0px 2px 0px 0px hsl(215 73% 15% / 0.05);
+  --shadow-sm: 0px 2px 0px 0px hsl(215 73% 15% / 0.05), 0px 1px 2px -1px hsl(215 73% 15% / 0.05);
+  --shadow: 0px 2px 0px 0px hsl(215 73% 15% / 0.05), 0px 1px 2px -1px hsl(215 73% 15% / 0.05);
+  --shadow-md: 0px 2px 0px 0px hsl(215 73% 15% / 0.05), 0px 2px 4px -1px hsl(215 73% 15% / 0.1);
+  --shadow-lg: 0px 2px 0px 0px hsl(215 73% 15% / 0.05), 0px 4px 6px -1px hsl(215 73% 15% / 0.1);
+  --shadow-xl: 0px 2px 0px 0px hsl(215 73% 15% / 0.05), 0px 8px 10px -1px hsl(215 73% 15% / 0.1);
+  --shadow-2xl: 0px 2px 0px 0px hsl(215 73% 15% / 0.1);
 
+  /* Bordures des boutons (dérivées automatiquement) */
   --opaque-button-border-intensity: -8;
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+  --elevate-1: rgba(0, 0, 0, .03);
+  --elevate-2: rgba(0, 0, 0, .08);
 
   --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
   --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
@@ -106,38 +119,43 @@
 }
 
 .dark {
-  --background: 220 15% 10%;
+  /* Fonds sombres – teinte bleue */
+  --background: 215 73% 8%;
   --foreground: 0 0% 98%;
-  --border: 153 15% 20%;
-  --input: 153 15% 20%;
-  --ring: 40 85% 55%;
-  
-  --card: 220 15% 12%;
+  --border: 215 30% 25%;
+  --input: 215 30% 25%;
+  --ring: 45 65% 52%;
+  /* Anneau de focus doré en mode sombre */
+
+  --card: 215 73% 12%;
   --card-foreground: 0 0% 98%;
-  --card-border: 153 15% 20%;
-  
-  --popover: 220 15% 12%;
+  --card-border: 215 30% 25%;
+
+  --popover: 215 73% 12%;
   --popover-foreground: 0 0% 98%;
-  --popover-border: 153 15% 20%;
-  
-  --primary: 153 50% 30%;
+  --popover-border: 215 30% 25%;
+
+  /* Primaire = bleu un peu plus clair pour lisibilité */
+  --primary: 215 73% 25%;
   --primary-foreground: 0 0% 100%;
-  
-  --secondary: 40 85% 55%;
-  --secondary-foreground: 153 50% 15%;
-  
-  --muted: 153 15% 15%;
-  --muted-foreground: 153 10% 60%;
-  
-  --accent: 40 85% 55%;
-  --accent-foreground: 153 50% 15%;
-  
+
+  /* Secondaire = doré inchangé */
+  --secondary: 45 65% 52%;
+  --secondary-foreground: 215 73% 15%;
+
+  --muted: 215 30% 20%;
+  --muted-foreground: 215 20% 70%;
+
+  --accent: 45 65% 52%;
+  --accent-foreground: 215 73% 15%;
+
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
+  /* Ajustement pour les bordures de boutons en mode sombre */
   --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --elevate-1: rgba(255, 255, 255, .04);
+  --elevate-2: rgba(255, 255, 255, .09);
 }
 
 @layer base {
