@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Send, HelpCircle } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FindUs from "@/components/sections/FindUs";
+import contactHero from "@/assets/contact-hero.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -112,104 +113,67 @@ export default function ContactPage() {
       <Navbar />
       
       <main className="flex-1">
-       {/* Page Hero Header - CINEMATIC ULTIMATE VERSION */}
-<div className="relative min-h-[60vh] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden text-white">
+     {/* Page Hero */}
+<div className="relative min-h-[65vh] overflow-hidden text-white">
 
   {/* Background Image */}
   <motion.img
-    src="/your-image.jpg" // ou ton asset importé
+    src={contactHero}
     alt="Contact Meditex"
-    className="absolute inset-0 h-full w-full object-cover scale-110"
-    initial={{ scale: 1.15 }}
+    className="absolute inset-0 h-full w-full object-cover brightness-110 contrast-105 saturate-110"
+    initial={{ scale: 1.05 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 2, ease: "easeOut" }}
+    transition={{ duration: 2 }}
   />
 
-  {/* Dark cinematic gradient layers */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/70" />
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(184,134,55,0.25),transparent_55%)]" />
-  <div className="absolute inset-0 opacity-30 bg-[url('/noise.png')]" />
+  {/* Light Overlay */}
+  <div className="absolute inset-0 bg-black/20" />
 
-  {/* Moving glow (subtle animation) */}
-  <motion.div
-    className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-secondary/20 blur-[140px] rounded-full"
-    animate={{
-      x: [0, 80, 0],
-      y: [0, 40, 0],
-    }}
-    transition={{
-      duration: 10,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
-  />
+  {/* Elegant Left Gradient */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/15 to-transparent" />
 
-  {/* Left accent line */}
-  <div className="absolute left-0 top-0 h-full w-1 bg-secondary z-10" />
+  {/* Warm Golden Glow */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,215,120,0.22),transparent_60%)]" />
+
+  {/* Soft Top Light */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-white/5" />
+
+  {/* Gold Accent */}
+  <div className="absolute left-0 top-0 h-full w-1 bg-secondary" />
+
+  {/* Bottom Fade */}
+  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-background via-background/70 to-transparent" />
 
   {/* Content */}
-  <div className="container mx-auto px-4 md:px-6 relative z-20">
+  <div className="container relative z-20 mx-auto flex min-h-[65vh] items-center px-4 md:px-6">
 
     <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: {},
-        visible: { transition: { staggerChildren: 0.06 } }
-      }}
-      className="max-w-3xl space-y-6"
+      initial={{ opacity: 0, x: -30 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      className="max-w-3xl"
     >
 
-      {/* Subtitle */}
-      <motion.span
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-secondary font-bold tracking-[0.3em] text-xs md:text-sm uppercase block"
-      >
-        {language === "en" ? "Premium Contact Experience" : "تجربة تواصل متميزة"}
-      </motion.span>
+      <span className="inline-block mb-5 text-secondary font-bold tracking-[0.35em] uppercase text-sm">
+        {language === "en"
+          ? "Premium Contact Experience"
+          : "تجربة تواصل متميزة"}
+      </span>
 
-      {/* Title (letter-like feel) */}
-      <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight"
-      >
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-white drop-shadow-lg">
         {t.title}
-      </motion.h1>
+      </h1>
 
-      {/* Description */}
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.2 }}
-        className="max-w-2xl text-base md:text-lg leading-relaxed text-white/80"
-      >
+      <p className="mt-6 max-w-2xl text-lg md:text-xl leading-relaxed text-white/95">
         {t.subtitle}
-      </motion.p>
+      </p>
 
-      {/* Accent line animated */}
-      <motion.div
-        initial={{ width: 0 }}
-        animate={{ width: 80 }}
-        transition={{ duration: 1, delay: 0.4 }}
-        className="h-[3px] bg-secondary rounded-full"
-      />
-
-      {/* CTA micro hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-        className="text-white/50 text-xs tracking-widest uppercase"
-      >
-        Scroll to connect ↓
-      </motion.div>
+      <div className="mt-8 w-24 h-1 rounded-full bg-secondary shadow-lg shadow-secondary/40" />
 
     </motion.div>
+
   </div>
+
 </div>
         {/* Contact and Form Section */}
         <section className="py-24 bg-background">
